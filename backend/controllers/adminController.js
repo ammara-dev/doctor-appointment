@@ -88,11 +88,6 @@ const loginAdmin = async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    console.log("ENV EMAIL:", process.env.ADMIN_EMAIL);
-    console.log("REQ EMAIL:", email);
-    console.log("ENV PASSWORD:", process.env.ADMIN_PASSWORD);
-    console.log("REQ PASSWORD:", password);
-
     if (
       email === process.env.ADMIN_EMAIL &&
       password === process.env.ADMIN_PASSWORD

@@ -10,7 +10,7 @@ const BackendUrl = import.meta.env.VITE_BACKEND_URL;
 const AppContextProvider = (props) => {
   const [doctors, setDoctors] = useState([]);
   const [token, setToken] = useState(
-    localStorage.getItem("token") ? localStorage.getItem("token") : false
+    localStorage.getItem("token") && localStorage.getItem("token") !== "false" && localStorage.getItem("token") !== "null" && localStorage.getItem("token") !== "undefined" ? localStorage.getItem("token") : false
   );
   const [userData, setUserData] = useState(false);
   const currencySymbol = "$";
@@ -63,7 +63,7 @@ const AppContextProvider = (props) => {
 
 
   useEffect(() => {
-    if(token){
+    if (token) {
       loadUserProfileData();
     }
   }, [token])

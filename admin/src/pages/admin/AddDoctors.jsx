@@ -45,7 +45,7 @@ const AddDoctors = () => {
       });
 
       const { data } = await axios.post(
-        backendUrl + '/api/admin/add-doctor',formData, { headers: { aToken } }
+        backendUrl + 'api/admin/add-doctor',formData, { headers: { aToken } }
       );
       if (data.success) {
         toast.success(data.message);
