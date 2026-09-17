@@ -1,2 +1,19 @@
 config.bat
-node_modules
+
+# Dependencies
+node_modules/
+
+# Environment files (commit only the .example templates)
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+dist-ssr/
+
+# Logs
+*.log
+
+# Vercel
+.vercel
